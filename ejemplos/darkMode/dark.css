@@ -1,0 +1,8 @@
+:root {
+    --body-color: black;
+    --main-color: #413f3f;
+    --section-color: darkgray;
+
+    --font-color: white;
+    color-scheme: dark;/*Para que el navegador cambie automaticamente los colores del texto, el scroll y demás elementos*/
+}
