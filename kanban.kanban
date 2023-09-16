@@ -165,10 +165,16 @@
           ],
           "checkboxes": [],
           "comments": []
-        },
+        }
+      ]
+    },
+    {
+      "id": "0a5447d2-e611-42b6-9a85-4f6b68b2e5e4",
+      "title": "Doing",
+      "cards": [
         {
           "id": "3ec309aa-1c6b-41cd-a184-ccda27cfa9ba",
-          "listId": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
+          "listId": "0a5447d2-e611-42b6-9a85-4f6b68b2e5e4",
           "title": "Barra Marcadores",
           "description": "La barra de marcadores consiste en una nueva página que lea del localStorage la información con los enlaces que el usuario introdujo previamente.\nEl usuario introducirá sus marcadores mediante un objeto json y la página lo guardará en el localStorage.\nEl usuario podrá borrar sus marcadores del localStorage.",
           "labels": [
@@ -208,11 +214,6 @@
           "comments": []
         }
       ]
-    },
-    {
-      "id": "0a5447d2-e611-42b6-9a85-4f6b68b2e5e4",
-      "title": "Doing",
-      "cards": []
     },
     {
       "id": "d7a0beec-1fbb-4ad1-b97a-57125f37be3b",
