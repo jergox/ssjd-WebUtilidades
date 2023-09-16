@@ -5,70 +5,6 @@
       "title": "BackLog",
       "cards": [
         {
-          "id": "3ec309aa-1c6b-41cd-a184-ccda27cfa9ba",
-          "listId": "07fedaca-7796-4704-a6c0-d87c0567f4ae",
-          "title": "Barra Marcadores",
-          "description": "La barra de marcadores consiste en una nueva página que lea del localStorage la información con los enlaces que el usuario introdujo previamente.\nEl usuario introducirá sus marcadores mediante un objeto json y la página lo guardará en el localStorage.\nEl usuario podrá borrar sus marcadores del localStorage.",
-          "labels": [],
-          "checkboxes": [
-            {
-              "id": "041e3b00-191f-4874-adb4-c06a0125a545",
-              "title": "Página nueva",
-              "checked": false
-            },
-            {
-              "id": "41af35c3-bd42-4e8a-affe-9fa445335dff",
-              "title": "Botón cargar marcadores",
-              "checked": false
-            },
-            {
-              "id": "97278d1c-3e09-4c37-bf3b-67e1ed0a9d2f",
-              "title": "Botón borrar marcadores",
-              "checked": false
-            },
-            {
-              "id": "565f500f-ae84-4825-96dc-9ecd986336c3",
-              "title": "Crear estructura del json",
-              "checked": false
-            },
-            {
-              "id": "f45dbefb-c26a-4ec7-95d4-5b0d343d1276",
-              "title": "Renderizar los marcadores",
-              "checked": false
-            }
-          ],
-          "comments": []
-        },
-        {
-          "id": "7ab3d986-ea7a-49ee-9ba4-d46073ff9915",
-          "listId": "07fedaca-7796-4704-a6c0-d87c0567f4ae",
-          "title": "Bibblioteca Recursos",
-          "description": "Una página que contendrá una lista de recursos externos que permitan realizar alguna tarea.  Cada categoría de recursos será una galería con sus elementos. Los elementos deberán incluir como mínimo: título, descripción, el enlace al recurso y una etiqueta que indique si es necesario registrarse para usarlo.\nPosibles categorías: animaciones CSS, IDEs, cursos de programación, ...",
-          "labels": [],
-          "checkboxes": [],
-          "comments": []
-        },
-        {
-          "id": "7cbfa1d8-abe1-4d23-bb42-f647b2a79a22",
-          "listId": "07fedaca-7796-4704-a6c0-d87c0567f4ae",
-          "title": "Blog Automático",
-          "description": "Una página que permitirá al usuario cargar un fichero json con el contenido de un blog y lo renderizará.",
-          "labels": [],
-          "checkboxes": [
-            {
-              "id": "df3cf12c-30d9-42c8-9601-7353a6b26d50",
-              "title": "Cargar fichero",
-              "checked": false
-            },
-            {
-              "id": "c0d5f68c-f02d-4a74-a831-44271f763be1",
-              "title": "Visualizar blog en HTML",
-              "checked": false
-            }
-          ],
-          "comments": []
-        },
-        {
           "id": "c672776f-caef-4161-8d1f-095a0d4a682b",
           "listId": "07fedaca-7796-4704-a6c0-d87c0567f4ae",
           "title": "Carta restaurante",
@@ -119,10 +55,10 @@
           "comments": []
         },
         {
-          "id": "763c19a7-164a-450b-9ded-07ac5bdb4542",
+          "id": "2bf5143d-0ba1-4317-b256-cfd68de565f9",
           "listId": "07fedaca-7796-4704-a6c0-d87c0567f4ae",
-          "title": "i-Generador Código",
-          "description": "Una página que contendrá diversos generadores de código que el usuario podrá usar para agilizar su trabajo.\nHay que investigar qué generadores se pueden hacer.\nCrear la tarea para realizar los generadores.",
+          "title": "i-Visor Markdown",
+          "description": "Una página que se divida a la mitad. En una mitad se escribirá texto markdown y en la otra su visualización.",
           "labels": [
             {
               "id": "5369285e-7cef-4321-b30c-daed213466b7",
@@ -132,10 +68,51 @@
           ],
           "checkboxes": [],
           "comments": []
+        }
+      ]
+    },
+    {
+      "id": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
+      "title": "ToDo",
+      "cards": [
+        {
+          "id": "7ab3d986-ea7a-49ee-9ba4-d46073ff9915",
+          "listId": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
+          "title": "Bibblioteca Recursos",
+          "description": "Una página que contendrá una lista de recursos externos que permitan realizar alguna tarea.  Cada categoría de recursos será una galería con sus elementos. Los elementos deberán incluir como mínimo: título, descripción, el enlace al recurso y una etiqueta que indique si es necesario registrarse para usarlo.\nPosibles categorías: animaciones CSS, IDEs, cursos de programación, ...",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "7cbfa1d8-abe1-4d23-bb42-f647b2a79a22",
+          "listId": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
+          "title": "Blog Automático",
+          "description": "Una página que permitirá al usuario cargar un fichero json con el contenido de un blog y lo renderizará.",
+          "labels": [
+            {
+              "id": "86b5ee56-9f2b-4f21-a55c-6ed1e98658e4",
+              "title": "Álvaro",
+              "color": "#00c2e0"
+            }
+          ],
+          "checkboxes": [
+            {
+              "id": "df3cf12c-30d9-42c8-9601-7353a6b26d50",
+              "title": "Cargar fichero",
+              "checked": false
+            },
+            {
+              "id": "c0d5f68c-f02d-4a74-a831-44271f763be1",
+              "title": "Visualizar blog en HTML",
+              "checked": false
+            }
+          ],
+          "comments": []
         },
         {
           "id": "db1d8ca9-2769-4def-a76f-e50a208fb597",
-          "listId": "07fedaca-7796-4704-a6c0-d87c0567f4ae",
+          "listId": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
           "title": "i-SQL",
           "description": "Es una página para practicar el lenguaje SQL. Debe usar la API de DDBB del navegador para guardar la información y hacer consultas.\nTendrá un editor de texto con marcado de sintaxis y autocompletado.\nLas consultas que devuelvan una tabla, deberán renderizar la tabla en formato HTML.\nLa BBDD contará por defecto con unas tablas que tengan aluguna relación.",
           "labels": [
@@ -143,6 +120,11 @@
               "id": "5369285e-7cef-4321-b30c-daed213466b7",
               "title": "Investigación",
               "color": "#0079bf"
+            },
+            {
+              "id": "c3497a8d-125b-4d2c-8e82-0de9dde5a55a",
+              "title": "Jorge",
+              "color": "#f2d600"
             }
           ],
           "checkboxes": [
@@ -170,10 +152,10 @@
           "comments": []
         },
         {
-          "id": "2bf5143d-0ba1-4317-b256-cfd68de565f9",
-          "listId": "07fedaca-7796-4704-a6c0-d87c0567f4ae",
-          "title": "i-Visor Markdown",
-          "description": "Una página que se divida a la mitad. En una mitad se escribirá texto markdown y en la otra su visualización.",
+          "id": "763c19a7-164a-450b-9ded-07ac5bdb4542",
+          "listId": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
+          "title": "i-Generador Código",
+          "description": "Una página que contendrá diversos generadores de código que el usuario podrá usar para agilizar su trabajo.\nHay que investigar qué generadores se pueden hacer.\nCrear la tarea para realizar los generadores.",
           "labels": [
             {
               "id": "5369285e-7cef-4321-b30c-daed213466b7",
@@ -183,13 +165,49 @@
           ],
           "checkboxes": [],
           "comments": []
+        },
+        {
+          "id": "3ec309aa-1c6b-41cd-a184-ccda27cfa9ba",
+          "listId": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
+          "title": "Barra Marcadores",
+          "description": "La barra de marcadores consiste en una nueva página que lea del localStorage la información con los enlaces que el usuario introdujo previamente.\nEl usuario introducirá sus marcadores mediante un objeto json y la página lo guardará en el localStorage.\nEl usuario podrá borrar sus marcadores del localStorage.",
+          "labels": [
+            {
+              "id": "5237c599-4363-48b2-bf06-4dc9c7b06c9c",
+              "title": "Sergio",
+              "color": "#ff9f1a"
+            }
+          ],
+          "checkboxes": [
+            {
+              "id": "041e3b00-191f-4874-adb4-c06a0125a545",
+              "title": "Página nueva",
+              "checked": false
+            },
+            {
+              "id": "41af35c3-bd42-4e8a-affe-9fa445335dff",
+              "title": "Botón cargar marcadores",
+              "checked": false
+            },
+            {
+              "id": "97278d1c-3e09-4c37-bf3b-67e1ed0a9d2f",
+              "title": "Botón borrar marcadores",
+              "checked": false
+            },
+            {
+              "id": "565f500f-ae84-4825-96dc-9ecd986336c3",
+              "title": "Crear estructura del json",
+              "checked": false
+            },
+            {
+              "id": "f45dbefb-c26a-4ec7-95d4-5b0d343d1276",
+              "title": "Renderizar los marcadores",
+              "checked": false
+            }
+          ],
+          "comments": []
         }
       ]
-    },
-    {
-      "id": "aaaeb980-b4a7-4dca-8934-ca5388fce333",
-      "title": "ToDo",
-      "cards": []
     },
     {
       "id": "0a5447d2-e611-42b6-9a85-4f6b68b2e5e4",
@@ -217,6 +235,21 @@
         "id": "5369285e-7cef-4321-b30c-daed213466b7",
         "title": "Investigación",
         "color": "#0079bf"
+      },
+      {
+        "id": "5237c599-4363-48b2-bf06-4dc9c7b06c9c",
+        "title": "Sergio",
+        "color": "#ff9f1a"
+      },
+      {
+        "id": "86b5ee56-9f2b-4f21-a55c-6ed1e98658e4",
+        "title": "Álvaro",
+        "color": "#00c2e0"
+      },
+      {
+        "id": "c3497a8d-125b-4d2c-8e82-0de9dde5a55a",
+        "title": "Jorge",
+        "color": "#f2d600"
       }
     ]
   }
