@@ -1,12 +1,41 @@
 body {
-    background: rgb(131, 58, 180);
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
 header {
-    background-color: black;
-    padding: 0.5px 10px;
-    text-align: center;
-    color: whitesmoke;
+  background-color: black;
+  padding: 0.5px 10px;
+  text-align: center;
+  color: whitesmoke;
 }
 
+.titulo-animado {
+  background: linear-gradient(
+    45deg,
+    rgba(131, 58, 180, 1),
+    rgba(253, 29, 29, 1),
+    rgba(252, 176, 69, 1),
+    rgba(131, 58, 180, 1)
+  );
+
+  background-size: 400%;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
