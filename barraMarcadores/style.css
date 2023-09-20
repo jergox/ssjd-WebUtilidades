@@ -26,6 +26,7 @@ header {
 
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   animation: animate 10s linear infinite;
 }
 @keyframes animate {
