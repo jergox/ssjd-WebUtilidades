@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Obligatorio Inicio-->
+    <script type="text/javascript" src="codemirror5-master/addedByMe/codemirror-basics/codemirror.min.js">
+        /*También está la versión online:
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js"*/
+    </script>
+    <script type="text/javascript" src="codemirror5-master/addedByMe/codemirror-basics/javascript.min.js">
+        /*También está la versión online:
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js"*/
+    </script>
+
+    <link rel="stylesheet" href="codemirror5-master/lib/codemirror.css">
+    <script type="text/javascript" src="codemirror5-master/addon/hint/show-hint.js"></script>
+    <link rel="stylesheet" href="codemirror5-master/addon/hint/show-hint.css">
+
+    <link rel="stylesheet" href="codemirror5-master/theme/monokai.css"><!--Elige el tema que gustes-->
+    <!--Obligatorio Fin-->
+
+    <script type="text/javascript" src="codemirror5-master/mode/sql/sql.js"></script>
+    <script type="text/javascript" src="codemirror5-master/addon/hint/sql-hint.js"></script>
+
+
+    <title>WEB SQL</title>
+</head>
+<body>
+    <style>
+        .codeEditor{
+            min-height: 10%;
+            background-color: grey;
+            border-radius: 7px;
+            padding: 0.3rem;
+        }
+    </style>
+    <div class="codeEditor">
+    <div id='editor1' class="codeEditor">
+        <div style="display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;">
+            <h1>SQL</h1>
+            <div style="border: solid black 3px; background-color: rgba(245, 245, 220, 0.798);">
+                <p>AutoComplete</p>
+                <p>Ctrl + Space</p>
+            </div>
+            <input type="button" value="Ejecutar"
+            style="height: 2rem;
+            width: 6rem;"
+            onclick="obtenerTexto(editor)//nombre de la const">
+            <input type="button" value="Reset"
+            style="height: 2rem;
+            width: 6rem;"
+            onclick="resetDB()">
+        </div>
+    </div>
+    <p>DevTools->Application->Web SQL<br>Pincha en Web SQL para minimidar y que se refresque la visualización</p>
+    <details>
+        <summary>JSON</summary>
+        <textarea id="resultadoJSON"></textarea>
+    </details>
+    <details open>
+        <summary>TABLA</summary>
+        <div id="resultadoTabla"></div>
+    </details>
+    <details>
+        <summary>DBDIAGRAM.IO</summary>
+        <p>Para diseñar la BBDD: <a href="https://dbdiagram.io/home" target="_blank">dbDiagram.io</a></p>
+    </details>
+    <details>
+        <summary>MOCKAROO</summary>
+        <p>Para generar datos de prueba: <a href="https://www.mockaroo.com/" target="_blank">mockaroo</a></p>
+    </details>
+    <details>
+        <summary>Editor</summary>
+        <a href="https://codemirror.net/" target="_blank">Code Mirror</a>
+    </details>
+    <details>
+        <summary>Web SQL DataBase</summary>
+        <a href="https://caniuse.com/sql-storage" target="_blank">Navegadores compatibles</a>
+    </details>
+        <script>
+            const editor = CodeMirror(document.getElementById('editor1'), {
+                lineNumbers: true,
+                //firstLineNumber: 20,
+                tabSize: 2,
+                value: `--SELECT j.jugadores_nombre, c.clases_nombre FROM jugadores j, clases c WHERE c.clases_id=j.jugadores_clase
+--INSERT INTO jugadores VALUES (6, 'jessica', 2)
+--DELETE FROM jugadores WHERE jugadores_id = 6
+--DROP TABLE jugadores`,
+                mode: 'sql',//el nombre que tenga el fichero en la carpeta por ejemplo 'htmlmixed'
+                theme: 'monokai',//el tema se importa en la cabecera
+                extraKeys: {"Ctrl-Space": "autocomplete"}
+            });
+            
+            function obtenerTexto(codeArea){
+                let valor = codeArea.getValue();
+                console.log(valor);
+                ejecutarSQL(valor, "resultadoJSON", "resultadoTabla");
+            }
+        </script>
+
+        <script>
+            const db = window.openDatabase('data', '1.0', 'data', 1 * 1024 *1024);
+
+            function jsonToTableHTML(json, div){
+                let tabla = `<table>`;
+                let pintarCabecera = true;
+                json.forEach(elementFila => {
+                    if(pintarCabecera){
+                        let cabecera = `<tr>`;
+                        for(var nombreColumna in elementFila){
+                            let nombre = `<th>`+nombreColumna+`</th>`;
+                            cabecera += nombre;
+                        }
+                        tabla += cabecera;
+                        pintarCabecera = false;
+                    }
+                    let fila = `<tr>`;
+                    for(var elementColumna in elementFila){
+                        var columna = `<td>`;
+                        columna += elementFila[elementColumna];
+                        columna += `</td>`;
+                        fila += columna;
+                    }
+                    fila += `</tr>`;
+                    tabla += fila;
+                });
+                tabla += `</table>`;
+
+                document.getElementById(div).innerHTML = tabla;
+            }
+
+            function ejecutarSQL(texto, pintarSalidaJSON, pintarSalidaTable){
+                let instrucciones = texto.split(';');
+                instrucciones.forEach(element => {
+                    db.transaction(t => t.executeSql(
+                    element,
+                    [],
+                    (t, result) => {
+                        console.log('Resultado', result.rows);
+                        let resultado = [];
+
+                        for (i = 0; i < result.rows.length; i++) {
+                            resultado.push(result.rows.item(i));
+                        }
+                        document.getElementById(pintarSalidaJSON).value = JSON.stringify(resultado);
+                        jsonToTableHTML(resultado, pintarSalidaTable);
+                    }
+                ));
+                });
+            }
+        </script>
+        <script>
+            const jugadores = [
+                {id: 0, nombre: "juan", clase: 0},
+                {id: 1, nombre: "german", clase: 1},
+                {id: 2, nombre: "maria", clase: 2},
+                {id: 3, nombre: "alfredo", clase: 0},
+                {id: 4, nombre: "laura", clase: 0},
+                {id: 5, nombre: "miguel", clase: 1}
+            ];
+
+            const clases = [
+                {id: 0, nombre: "mago", vida: 3, magia: 10, resistencia: 1, ataque: 1},
+                {id: 1, nombre: "guerrero", vida: 6, magia: 1, resistencia: 5, ataque: 10},
+                {id: 2, nombre: "paladin", vida: 7, magia: 0, resistencia: 10, ataque: 3}
+            ];
+            db.transaction(t => {
+                //t.executeSql(`DROP TABLE jugadores`);
+                t.executeSql(
+                    `CREATE TABLE jugadores (jugadores_id INTEGER, jugadores_nombre TEXT, jugadores_clase INTEGER)`
+                    );
+                //t.executeSql(`DROP TABLE clases`);
+                t.executeSql(
+                    `CREATE TABLE clases (clases_id INTEGER, clases_nombre TEXT, clases_vida INTEGER, clases_magia INTEGER, clases_resistencia INTEGER, clases_ataque INTEGER)`
+                    );
+
+                for (let jugador = 0; jugador < jugadores.length; jugador++) {
+                    const element = jugadores[jugador];
+                    t.executeSql(
+                        `INSERT INTO jugadores (jugadores_id, jugadores_nombre, jugadores_clase)
+                    VALUES (?, ?, ?)`, 
+                    [element.id, element.nombre, element.clase]
+                    );
+                }
+                for (let clase = 0; clase < clases.length; clase++) {
+                    const element = clases[clase];
+                    t.executeSql(
+                        `INSERT INTO clases (clases_id, clases_nombre, clases_vida, clases_magia, clases_resistencia, clases_ataque)
+                    VALUES (?, ?, ?, ?, ?, ?)`, 
+                    [element.id, element.nombre, element.vida, element.magia, element.resistencia, element.ataque]);
+                }
+            }, e => console.error(e));
+
+        </script>
+
+        <script>
+            const db_d_jugadores = `DROP TABLE jugadores`;
+            const db_d_clases = `DROP TABLE clases`;
+            const db_c_jugadores = `CREATE TABLE jugadores (jugadores_id INTEGER, jugadores_nombre TEXT, jugadores_clase INTEGER)`;
+            const db_c_clases = `CREATE TABLE clases (clases_id INTEGER, clases_nombre TEXT, clases_vida INTEGER, clases_magia INTEGER, clases_resistencia INTEGER, clases_ataque INTEGER)`;
+            const db_i_jugadores = `INSERT INTO jugadores (jugadores_id, jugadores_nombre, jugadores_clase)
+                    VALUES (0, 'juan', 0),
+                    (1, 'german', 1),
+                    (2, 'maria', 2),
+                    (3, 'alfredo', 0),
+                    (4, 'laura', 0),
+                    (5, 'miguel', 1)`;
+            const db_i_clases = `INSERT INTO clases (clases_id, clases_nombre, clases_vida, clases_magia, clases_resistencia, clases_ataque)
+                    VALUES (0, 'mago', 3, 10, 1, 1),
+                    (1, 'gerrero', 6, 1, 5, 10),
+                    (2, 'paladin', 7, 0, 10, 3)`;
+            
+            function resetDB() {
+                db.transaction(t => {
+                t.executeSql(db_d_jugadores);
+            }, e => console.error(e));
+            db.transaction(t => {
+                t.executeSql(db_d_clases);
+            }, e => console.error(e));
+            db.transaction(t => {
+                t.executeSql(db_c_jugadores);
+            }, e => console.error(e));
+            db.transaction(t => {
+                t.executeSql(db_c_clases);
+            }, e => console.error(e));
+            db.transaction(t => {
+                t.executeSql(db_i_jugadores);
+            }, e => console.error(e));
+            db.transaction(t => {
+                t.executeSql(db_i_clases);
+            }, e => console.error(e));
+            }
+        </script>
+
+    </div>
+</body>
+</html>
