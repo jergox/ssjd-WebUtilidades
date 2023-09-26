@@ -37,3 +37,96 @@ header {
     background-position: 400%;
   }
 }
+
+/* Caja Navegador */
+nav {
+  background-color: black;
+  width: 40svh; 
+  padding: 1px ;
+  border-radius: 10px;
+}
+
+/* Reacondicionando el menu vertical */
+.menu-vertical {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Decoracion list item */
+.menu-vertical > .li-1 {
+  display: block;
+  padding: 10px 20px;
+  color: whitesmoke;
+}
+
+/* Editando la accion hover */
+.menu-vertical > .li-1:hover {
+  background-color: red;
+}
+
+/* Reacondicionando submenus */
+.submenu-vertical {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 200px;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+/* Ajustando tamaños */
+.li-2 {
+  padding: 10px 20px;
+}
+
+.menu-vertical .li-1:hover .submenu-vertical {
+  display: block;
+}
+
+/* Editando accion hover */
+.submenu-vertical .li-2:hover {
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+}
+
+/* Decoracion submenus */
+.submenu-vertical .li-3 {
+  display: block;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Decorando list item */
+.submenu-vertical > .li-3 {
+  display: block;
+  padding: 10px 20px;
+  color: whitesmoke;
+}
+
+/* Accion Hover */
+.submenu-vertical > li:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.subsubmenu-vertical {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 200px;
+  background-color: rgb(156, 156, 156);
+  border-radius: 10px;
+}
+
+.submenu-vertical .li-2:hover .subsubmenu-vertical {
+  display: block;
+}
+
+.subsubmenu-vertical .li-3:hover {
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 10px;
+}
