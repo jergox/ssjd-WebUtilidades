@@ -1,0 +1,13 @@
+.titulo {
+    background-color: aqua;
+    border: black 2px solid;
+    text-align: center;
+    
+}
+
+.menu {
+    background-color: burlywood;
+    border: black 1px solid;
+    text-align: center;
+    margin-top: 2vh;
+}

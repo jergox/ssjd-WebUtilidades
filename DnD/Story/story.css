@@ -1,0 +1,33 @@
+.hamburger-menu {
+  /*grid-area: hamburger;*/
+  position: fixed;
+  z-index: 10;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.666);
+}
+.titulo {
+  grid-area: titulo;
+}
+.dados {
+  grid-area: dados;
+}
+.historia {
+  grid-area: historia;
+}
+.barras {
+  grid-area: barras;
+}
+.habilidades {
+  grid-area: habilidades;
+}
+
+.grid-container {
+  display: grid;
+  gap: 2%;
+
+  grid-template:
+    "titulo titulo" 15vh
+    "historia historia" 60vh
+    "barras barras" 8vh
+    "habilidades habilidades" 15vh/
+    2vw auto;
+}
