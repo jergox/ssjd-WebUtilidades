@@ -8,7 +8,11 @@
   grid-area: titulo;
 }
 .dados {
-  grid-area: dados;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.666);
+  top: 93vh;
+  left: 45vw;
 }
 .historia {
   grid-area: historia;
