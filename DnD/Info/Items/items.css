@@ -1,0 +1,52 @@
+.titulo {
+    background-color: aqua;
+    border: black 2px solid;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.menu {
+    background-color: burlywood;
+    border: black 2px solid;
+    text-align: center;
+    margin-top: 2vh;
+    border-radius: 20px;
+    padding: 3%;
+}
+
+/*menu deslizable*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+}
+
+.sileder-show {
+    overflow: scroll;
+    max-height: 20vh;
+    background-color: burlywood;
+    padding: 0 5%;
+
+    display: flex;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+/* Ocultar la barra de scroll */
+.sileder-show::-webkit-scrollbar {
+    display: none;
+}
+
+.show-item {
+    display: inline;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 20vh;
+    background-color: rgb(209, 173, 125);
+
+    scroll-snap-align: center;
+}
