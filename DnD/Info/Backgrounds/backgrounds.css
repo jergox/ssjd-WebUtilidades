@@ -1,0 +1,32 @@
+.titulo {
+    background-color: aqua;
+    border: black 2px solid;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .menu {
+    background-color: burlywood;
+    border: black 2px solid;
+    margin-top: 2vh;
+    border-radius: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .raza {
+    margin-bottom: 2vh;
+    margin-right: 70%;
+  }
+  
+  details {
+    border: black 2px solid;
+    background-color: rgb(230, 208, 178);
+    border-radius: 20px;
+    padding: 5%;
+  }
+  
