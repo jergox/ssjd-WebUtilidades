@@ -1,27 +1,51 @@
-.hamburger-menu {
+.home {
   /*grid-area: hamburger;*/
   position: fixed;
   z-index: 10;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.666);
+  background-color: antiquewhite;
+  top: 6vh;
+  left: 1vw;
+  padding: 3px;
+  border-radius: 10px;
+  border: black 1px solid;  
 }
-.titulo {
-  grid-area: titulo;
+
+.title {
+  grid-area: title;
+  text-align: center;
+  background-color: cyan;
+  border: black 2px solid;
+  border-radius: 20px;
 }
+
+.story {
+  grid-area: story;
+  border: black 2px solid;
+  border-radius: 20px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-image: ;
+}
+
+.bars {
+  grid-area: bars;
+  border: black 2px solid;
+  border-radius: 20px;
+}
+
+.skills {
+  grid-area: skills;
+  border: black 2px solid;
+  border-radius: 20px;
+}
+
 .dados {
   position: fixed;
   z-index: 10;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.666);
   top: 93vh;
-  left: 45vw;
-}
-.historia {
-  grid-area: historia;
-}
-.barras {
-  grid-area: barras;
-}
-.habilidades {
-  grid-area: habilidades;
+  left: 50vw;
 }
 
 .grid-container {
@@ -29,9 +53,9 @@
   gap: 2%;
 
   grid-template:
-    "titulo titulo" 15vh
-    "historia historia" 60vh
-    "barras barras" 8vh
-    "habilidades habilidades" 15vh/
+    "title title" 15vh
+    "story story" 60vh
+    "bars bars" 8vh
+    "skills skills" 15vh/
     2vw auto;
 }
