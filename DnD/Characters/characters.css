@@ -1,0 +1,18 @@
+.title {
+    background-color: cyan;
+    border: black 1px solid;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.import {
+    background-color: antiquewhite;
+    border: black 2px solid;
+    border-radius: 20px;
+    padding: 5px;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.666);
+    bottom: 5vh;
+    left: 49vw;
+}

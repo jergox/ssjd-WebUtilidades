@@ -1,0 +1,36 @@
+.title {
+    background-color: cyan;
+    border: black 1px solid;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.menu {
+    display: grid;
+    position: fixed;
+    grid-template: "void" 81vh "footer-fix" auto;
+}
+
+.footer {
+    display: flex;
+    width: 100vw;
+    grid-area: "footer-fix";
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    background-color: antiquewhite;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.666);
+}
+
+.void {
+    grid-area: "void";
+}
+
