@@ -1,0 +1,145 @@
+{
+    "Clases": [
+        {
+            "Nombre": "Artificiero",
+            "Caract-Unicas":{
+                "Destreza": 10,
+                "Constitución": "1d8"                
+            },
+            "Tiros-Salva":{
+                "Fuerza": false,
+                "Destreza": false,
+                "Constitución": true,
+                "Inteligencia": true,
+                "Conocimiento": false,
+                "Carisma": false
+            },
+            "Caract":[
+                "Especialidad",
+                "Analisis de Items Magicos",
+                "Experto en Herramientas",
+                "invento Maravilloso",
+                "Hechiceria",
+                "Crafteo Magico Avanzado",
+                "Infusion Magica",
+                "Sintonia Superior",
+                "Alma de Artificiero"
+            ],
+            "Habilidad Magica": "Inteligencia",
+            "Eficiecia Magica": "Medio-Magico (1/2)",
+            "Hechizos Base":[
+                "Deteccion de Magia",
+                "Indentificar"
+            ],
+            "Ataques por Accion": "1 dado nivel 1",
+            "Habilidad a Eleccion": "3 Arcanas, Ilusion, Historia, Investigacion, Medicina, Naturaleza, Religion, Robo",
+            "Equipamiento a Eleccion":{
+                "Arma Primaria":["2 Armas Simples"],
+                "Arma Secundaria":["Ballesta Ligera y 20 Pernos"],
+                "Armadura":["Cota de Escamas", "Cuero Tachonadas"],
+                "Complemento":["Herramientas de Ladrones y Explorador de Mazmorras"]
+            },
+            "Afinidades de Armadura":[
+                "[1] Armaduras Ligueras",
+                "[1] Armaduras Medianas"
+            ],
+            "Afinidades de Armas":[
+                "[2] Armas Ligueras",
+                "[2] Ballesta Ligera",
+                "[1] Ballesta Pesada"
+            ],
+            "Afinidades de Herramientas":[
+                "[1] Herramientas de Ladrones",
+                "[1] A Eleccion",
+                "[1] A Eleccion"
+            ],
+            "Arquetipos":[
+                "Alquimista",
+                "Mecanico",
+                "Armero"
+            ]
+                
+        },
+        {
+            "Nombre": ,
+            "Caract-Unicas": ,
+            "Tiros-Salva": ,
+            "Caract": ,
+            "Habilidad Magica": ,
+            "Eficiecia Magica": ,
+            "Hechizos Base": ,
+            "Ataques por Accion": ,
+            "Habilidad a Eleccion": ,
+            "Equipamiento a Eleccion": ,
+            "Afinidades de Armadura": ,
+            "Afinidades de Armas": ,
+            "Afinidades de Herramientas": ,
+            "Arquetipos": ,
+        },
+        {
+            "Nombre": ,
+            "Caract-Unicas": ,
+            "Tiros-Salva": ,
+            "Caract": ,
+            "Habilidad Magica": ,
+            "Eficiecia Magica": ,
+            "Hechizos Base": ,
+            "Ataques por Accion": ,
+            "Habilidad a Eleccion": ,
+            "Equipamiento a Eleccion": ,
+            "Afinidades de Armadura": ,
+            "Afinidades de Armas": ,
+            "Afinidades de Herramientas": ,
+            "Arquetipos": ,
+        },
+        {
+            "Nombre": ,
+            "Caract-Unicas": ,
+            "Tiros-Salva": ,
+            "Caract": ,
+            "Habilidad Magica": ,
+            "Eficiecia Magica": ,
+            "Hechizos Base": ,
+            "Ataques por Accion": ,
+            "Habilidad a Eleccion": ,
+            "Equipamiento a Eleccion": ,
+            "Afinidades de Armadura": ,
+            "Afinidades de Armas": ,
+            "Afinidades de Herramientas": ,
+            "Arquetipos": ,
+        },
+        {
+            "Nombre": ,
+            "Caract-Unicas": ,
+            "Tiros-Salva": ,
+            "Caract": ,
+            "Habilidad Magica": ,
+            "Eficiecia Magica": ,
+            "Hechizos Base": ,
+            "Ataques por Accion": ,
+            "Habilidad a Eleccion": ,
+            "Equipamiento a Eleccion": ,
+            "Afinidades de Armadura": ,
+            "Afinidades de Armas": ,
+            "Afinidades de Herramientas": ,
+            "Arquetipos": ,
+        },
+        {
+            "Nombre": ,
+            "Caract-Unicas": ,
+            "Tiros-Salva": ,
+            "Caract": ,
+            "Habilidad Magica": ,
+            "Eficiecia Magica": ,
+            "Hechizos Base": ,
+            "Ataques por Accion": ,
+            "Habilidad a Eleccion": ,
+            "Equipamiento a Eleccion": ,
+            "Afinidades de Armadura": ,
+            "Afinidades de Armas": ,
+            "Afinidades de Herramientas": ,
+            "Arquetipos": ,
+        }
+        
+    ]
+}
