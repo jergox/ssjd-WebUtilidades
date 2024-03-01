@@ -12,7 +12,7 @@
 <body>
     <div class="grid-container">
         <div class="home">
-            <a href="../home.html">Home</a>
+            <a href="../">Back</a>
         </div>
         <div class="title">
             <h1>Titulo de Campaña</h1>
@@ -21,7 +21,9 @@
             
         </div>
         <div class="bars">
-            barras
+            <progress id="gg1" min="0" max="20" value="10" oninput="this.title=this.value"></progress>
+            <meter min="0" max="20" value="50" oninput="this.title=this.value"></meter>
+            <input type="range" name="" id="fRango1" min="0" max="20" oninput="this.title=this.value" step="2">
         </div>
         <div class="skills">
             habilidades

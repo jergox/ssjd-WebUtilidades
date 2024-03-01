@@ -25,19 +25,27 @@
   border-radius: 20px;
   margin-left: 10vw;
   margin-right: 10vw;
-  background-image: ;
+  background-image: url(../Img/mantelStory\(2\).jpg);
+  background-position-x: ;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-color: rgb(253, 246, 227);
 }
 
 .bars {
   grid-area: bars;
   border: black 2px solid;
   border-radius: 20px;
+  padding: 4px 8px;
+  margin: 0px 7vw;
 }
 
 .skills {
   grid-area: skills;
   border: black 2px solid;
   border-radius: 20px;
+  padding: 4px 8px;
+  margin: 0px 7vw;
 }
 
 .dados {
