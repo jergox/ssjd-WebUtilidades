@@ -13,7 +13,6 @@ body {
     "void" 92vh
     "footer-fix" auto;
 }
-
 .footer {
   background-color: brown;
   display: flex;
