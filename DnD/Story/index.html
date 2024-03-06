@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="story.css">
+    <script src="story.js"></script>
+    <title>Dungeons & Dragons</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="home">
+            <a href="../">Back</a>
+        </div>
+        <div class="title">
+            <h1>Titulo de Campaña</h1>
+        </div>
+        <div class="story">
+
+        </div>
+        <div class="bars">
+            <progress id="gg1" min="0" max="20" value="10" oninput="this.title=this.value"></progress>
+
+            <meter min="0" max="20" value="50" oninput="this.title=this.value"></meter>
+
+            <input type="range" name="" id="fRango1" min="0" max="20" oninput="this.title=this.value" step="2">
+        </div>
+        <div class="utilities">
+            <div class="character">
+                <div class="rombo maximus">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="skills">
+                Habilidades
+            </div>
+
+            <div class="item">
+                <div class="inventory">
+                    <div class="rombo minus"></div>
+                </div>
+                <div class="spell">
+                    <div class="rombo minus"></div>
+                </div>
+                <div class="otros">
+                    <div class="rombo minus"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="../Img/dadoIcon.png" alt="Dado" class="dado-button" onclick="dlg.showModal()">
+            <dialog id="dlg">
+                <button onclick="dlg.close()">X</button>
+                <a href="">hola</a>
+                <a href="">adios</a>
+            </dialog>
+        </div>
+    </div>
+</body>
+
+</html>
