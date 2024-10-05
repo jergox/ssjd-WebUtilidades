@@ -1,0 +1,115 @@
+[
+    {
+        "tipo": "bloque",
+        "nombre": "Tarea 2233",
+        "background_color": "#fabadaa0",
+        "color": "dark",
+        "bloqueL": [
+            {
+                "tipo": "enlace",
+                "enlace": "http://www.google.com",
+                "nombre": "miWeb",
+                "tultip": "para documentos"
+            },
+            {
+                "tipo": "desplegable",
+                "nombre": "AzureLinks",
+                "tultip": "tultip",
+                "elementos": [
+                    {
+                        "tipo": "enlace",
+                        "enlace": "http://www.google.com",
+                        "nombre": "miWeb",
+                        "tultip": "para documentos"
+                    },
+                    {
+                        "tipo": "enlace",
+                        "enlace": "http://www.google.com",
+                        "nombre": "miWeb",
+                        "tultip": "para documentos"
+                    }
+                ]
+            },
+            {
+                "tipo": "desplegable",
+                "nombre": "AzureLinks",
+                "tultip": "tultip",
+                "elementos": [
+                    {
+                        "tipo": "enlace",
+                        "enlace": "http://www.google.com",
+                        "nombre": "miWeb",
+                        "tultip": "para documentos"
+                    },
+                    {
+                        "tipo": "enlace",
+                        "enlace": "http://www.google.com",
+                        "nombre": "miWeb",
+                        "tultip": "para documentos"
+                    },
+                    {
+                        "tipo": "desplegable",
+                        "nombre": "AzureLinks",
+                        "tultip": "tultip",
+                        "elementos": [
+                            {
+                                "tipo": "enlace",
+                                "enlace": "http://www.google.com",
+                                "nombre": "miWeb",
+                                "tultip": "para documentos"
+                            },
+                            {
+                                "tipo": "enlace",
+                                "enlace": "http://www.google.com",
+                                "nombre": "miWeb",
+                                "tultip": "para documentos"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tipo": "bloque",
+        "nombre": "Tarea 2233",
+        "background_color": "#805000a0",
+        "color": "dark",
+        "bloqueL": [
+            {
+                "tipo": "enlace",
+                "enlace": "http://www.google.com",
+                "nombre": "miWeb",
+                "tultip": "para documentos"
+            }
+        ]
+    },
+    {
+        "tipo": "bloque",
+        "nombre": "Tarea 2233",
+        "background_color": "#205100a0",
+        "color": "dark",
+        "bloqueL": [
+            {
+                "tipo": "enlace",
+                "enlace": "http://www.google.com",
+                "nombre": "miWeb",
+                "tultip": "para documentos"
+            }
+        ]
+    },
+    {
+        "tipo": "bloque",
+        "nombre": "Tarea 2233",
+        "background_color": "#205190a0",
+        "color": "dark",
+        "bloqueL": [
+            {
+                "tipo": "enlace",
+                "enlace": "http://www.google.com",
+                "nombre": "miWeb",
+                "tultip": "para documentos"
+            }
+        ]
+    }
+]
